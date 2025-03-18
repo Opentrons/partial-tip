@@ -1,0 +1,37 @@
+{
+  "name": "partial-tip",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mts,.mjs --fix",
+    "lint-check": "eslint . --ext .js,.jsx,.ts,.tsx,.mts,.mjs",
+    "fix": "pnpm run format && pnpm run lint",
+    "check": "pnpm run format-check && pnpm run lint-check"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.11",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react": "^7.37.4",
+    "jiti": "^2.4.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2"
+  },
+  "prettier": {
+    "semi": false
+  }
+}

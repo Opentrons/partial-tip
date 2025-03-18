@@ -1,0 +1,269 @@
+/* General styling */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.container {
+  text-align: left; /* Left justify the entire container */
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Label styling */
+.container label {
+  background-color: #f0f0f0; /* Light background for select labels */
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Select styling */
+select {
+  background-color: #f0f0f0; /* Light background for selects */
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 50%; /* Set selects to 50% width */
+  text-align: left; /* Left justify text within the selects */
+  font-size: 1rem;
+}
+
+/* Button styling */
+.buttons {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+/* Grid styling */
+.grid-container {
+  display: grid;
+  grid-template-columns: 50px repeat(3, 100px); /* First column narrower */
+  grid-template-rows: auto repeat(4, 50px);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 460px;
+  background-color: #f9f9f9; /* Light background color for the grid */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Grid item styling */
+.grid-item {
+  background-color: #e0e0e0; /* Light gray background */
+  border: 1px solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Styling for row labels (first column) and column labels (first row) */
+.row-label,
+.col-label {
+  background-color: #fff; /* White background for labels */
+  border: 1px solid #999;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+/* Specific styling for the first column (row labels) */
+.grid-item.row-label {
+  background-color: #d3d3d3; /* Slightly darker background for row labels */
+  color: #000; /* Dark text color */
+  font-family:
+    "Courier New", Courier, monospace; /* Different font for A, B, C, D */
+  font-size: 0.9rem; /* Smaller font size for row labels */
+  cursor: default; /* No pointer cursor for labels */
+}
+
+/* Hide borders for empty grid items */
+.grid-item.empty {
+  background-color: transparent;
+  border: none;
+}
+
+/* Tip rack styling */
+.tip-rack {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #000;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.tip-rack.full {
+  background-color: #ffcc00; /* Full tip rack background color */
+}
+
+.tip-rack.empty {
+  background-color: #ffffff; /* Empty tip rack background color */
+}
+
+/* Starting location styling */
+.starting-location {
+  position: absolute;
+}
+
+.small-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 100;
+  background-color: #ff0000; /* Example color for starting location indicator */
+  position: absolute;
+}
+
+/* Correct positioning for the small-circle */
+.small-circle.top-left {
+  top: 0;
+  left: 0;
+}
+
+.small-circle.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.small-circle.top-right {
+  top: 0;
+  right: 0;
+}
+
+.small-circle.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.oblong-row {
+  height: 10px;
+  width: 100%;
+  background-color: #ff0000; /* Example color for row starting indicator */
+}
+
+.oblong-column {
+  width: 10px;
+  height: 100%;
+  background-color: #ff0000; /* Example color for column starting indicator */
+}
+
+.oblong-partial-column {
+  width: 10px;
+  height: 50%;
+  left: 0;
+  top: 0;
+  background-color: #ff0000; /* Example color for partial column indicator */
+}
+
+/* Positioning helpers */
+.top-left {
+  top: 0;
+  left: 0;
+}
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.top-right {
+  top: 0;
+  right: 0;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* Disabled state for buttons */
+.disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Pipette entity styling */
+.pipette {
+  position: absolute;
+  background-color: blue;
+  z-index: 50;
+}
+
+.pipette-96-channel {
+  width: 80%;
+  height: 80%;
+}
+
+.pipette-8-channel {
+  width: 10%;
+  height: 80%;
+}
+
+.pipette.top-left {
+  transform: translateX(110%) translateY(110%);
+}
+
+.pipette.bottom-left {
+  transform: translateX(110%) translateY(-110%);
+}
+
+.pipette.top-right {
+  transform: translateX(-110%) translateY(110%);
+}
+
+.pipette.bottom-right {
+  transform: translateX(-110%) translateY(-110%);
+}
+
+.pipette.left {
+  transform: translate(110%, -50%);
+}
+.pipette.right {
+  transform: translate(-110%, -50%);
+}
+.pipette.top {
+  transform: translateY(110%);
+}
+.pipette.bottom {
+  transform: translateY(-110%);
+}
+.pipette.partial-column {
+  transform: translateY(-110%);
+  left: 0;
+}
